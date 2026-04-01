@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lathith Prabhu | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    scroll-behavior: smooth;
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 1000;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: bold;
+}
+body.dark nav {
+    background: #020617;
+}
+body.dark nav a {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+    flex-wrap: wrap;
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0f172a;
+}
+body.dark .profile-img {
+    border-color: #38bdf8;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #0f172a;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover effect */
+.btn:hover {
+    background: white;
+    color: #0f172a;
+    border: 2px solid #0f172a;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Dark mode hover */
+body.dark .btn {
+    background: #38bdf8;
+    color: black;
+}
+
+body.dark .btn:hover {
+    background: black;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+body.dark .card {
+    background: #1e293b;
+    border: none;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS */
+.bar {
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 5px;
+}
+.bar div {
+    height: 8px;
+    background: #0f172a;
+    width: 0;
+}
+body.dark .bar {
+    background: #334155;
+}
+body.dark .bar div {
+    background: #38bdf8;
+}
+
+/* TYPING */
+#typing {
+    border-right: 2px solid #0f172a;
+    padding-right: 5px;
+}
+body.dark #typing {
+    border-color: white;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+}
+body.dark footer {
+    background: #020617;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: 0.3s;
+}
+
+body.dark .cert-card {
+    background: #1e293b;
+}
+
+.cert-card img {
+    width: 100%;
+    max-height: 300px;   /* controls height */
+    object-fit: contain; /* keeps full image */
+    border-radius: 10px;
+}
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#timeline">Timeline</a>
+<a href="#contact">Contact</a>
+<a href="#certificates">Certificates</a>
+<button id="themeToggle" class="btn">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section id="about" class="hero">
+<div>
+<h1>Lathith Prabhu</h1>
+<p id="typing"></p>
+<a class="btn" href="resume/Lathithprabhu_resume.pdf" download>Download Resume</a>
+</div>
+
+<div>
+<img src="profile.jpg" class="profile-img">
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="card fade">
+Python<div class="bar"><div data-width="80%"></div></div>
+Java<div class="bar"><div data-width="60%"></div></div>
+Networking<div class="bar"><div data-width="70%"></div></div>
+Cybersecurity<div class="bar"><div data-width="65%"></div></div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="card fade">Student Information System</div>
+<div class="card fade">Cyber Safety Awareness</div>
+<div class="card fade">Cloud Notes Organizer</div>
+</section>
+
+<!-- CERTIFICTAES -->
+<section id="certificates">
+<h2>Certifications</h2>
+
+<div class="cert-grid">
+
+    <div class="cert-card fade">
+        <img src="images/THM2022_Lathith.jpeg">
+        <h3>TryHackMe Certificate</h3>
+        <p>Cybersecurity Training</p>
+    </div>
+
+    <div class="cert-card fade">
+        <img src="images/Google_lathith.jpg">
+        <h3>Google Certificate</h3>
+        <p>Digital marketing</p>
+    </div>
+
+<div class="cert-card fade">
+        <img src="images/Ios_lathith.jpg">
+        <h3>IOS Certificate</h3>
+        <p>IOS certificate by stanford</p>
+    </div>
+
+<div class="cert-card fade">
+        <img src="images/Slytherin_cert.jpg">
+        <h3>Slytherin certificate</h3>
+        <p>EHCCI (Ethical Hacking & Cybercrime Investigation)</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+<h2>Timeline</h2>
+<div class="card fade">SSLC (2018 - 2019)</div>
+<div class="card fade">Higher Secondary School (HSC) (2020 - 2021)</div>
+<div class="card fade">B.Sc Computer Science (2021–2024)</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<div class="card fade">
+📧 lathithprabhu@gmail.com <br>
+📞 +91 9025322036 <br><br>
+
+<a class="btn" href="https://linkedin.com/in/YOUR-LINK" target="_blank">LinkedIn</a>
+<a class="btn" href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
+</div>
+</section>
+
+<footer>
+© 2026 Lathith Prabhu
+</footer>
+
+<!-- JS -->
+<script>
+// Typing
+const text = "IT Support | System Administrator | Cybersecurity Enthusiast";
+let i = 0;
+function typing(){
+ if(i < text.length){
+  document.getElementById("typing").innerHTML += text.charAt(i);
+  i++;
+  setTimeout(typing, 50);
+ }
+}
+typing();
+
+// Scroll animation
+const elements = document.querySelectorAll(".fade");
+window.addEventListener("scroll", () => {
+ elements.forEach(el => {
+  if(el.getBoundingClientRect().top < window.innerHeight - 100){
+   el.classList.add("show");
+  }
+ });
+});
+
+// Skill bars
+const bars = document.querySelectorAll(".bar div");
+window.addEventListener("scroll", () => {
+ bars.forEach(bar => {
+  if(bar.getBoundingClientRect().top < window.innerHeight - 100){
+   bar.style.width = bar.getAttribute("data-width");
+  }
+ });
+});
+
+// Theme toggle
+const toggleBtn = document.getElementById("themeToggle");
+
+if(localStorage.getItem("theme") === "dark"){
+ document.body.classList.add("dark");
+ toggleBtn.innerHTML = "☀️";
+}
+
+toggleBtn.onclick = () => {
+ document.body.classList.toggle("dark");
+
+ if(document.body.classList.contains("dark")){
+  localStorage.setItem("theme","dark");
+  toggleBtn.innerHTML = "☀️";
+ } else {
+  localStorage.setItem("theme","light");
+  toggleBtn.innerHTML = "🌙";
+ }
+};
+</script>
+
+</body>
+</html>
